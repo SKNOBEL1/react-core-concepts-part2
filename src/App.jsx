@@ -1,9 +1,13 @@
 import Counter  from './Counter';
 import Batsman from './Batsman';
+import Users from './Users';
 // import { useState } from 'react'
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
+
+const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users')
+.then(res => res.json())
 
 function App() {
 
@@ -25,6 +29,7 @@ const handleAdd5 = (num) => {
      
       <h3>Vite + React</h3>
 
+       <Users></Users>
       <Batsman></Batsman>
       <Counter></Counter>
 
